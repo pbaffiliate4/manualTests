@@ -1,1 +1,0 @@
-var documents = require("document");var params = {"name":"name86474","descr":"i am a test","age":"18","stat":"free","dob": "1980-05-30","meta.types":{"descr":"text","age":"numeric", "dob":"date","stat":"string"},"meta.ftsFields":["descr", "dob", "stat", "name", "age"]};var result = documents.save(params);return result;
