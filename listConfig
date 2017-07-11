@@ -1,0 +1,4 @@
+ 
+
+return apsdb.callApi('ListConfiguration', null, null).result.gitPurge; 		   
+	
