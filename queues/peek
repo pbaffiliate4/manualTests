@@ -1,0 +1,2 @@
+var queue = require("queue").getInstance("test1");
+queue.peek({"itemCount": 2, "payloadMaxCharacters": 50001});

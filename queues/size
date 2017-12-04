@@ -1,0 +1,2 @@
+var queue = require("queue").getInstance("test1");
+return queue.size();

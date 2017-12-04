@@ -1,0 +1,3 @@
+var queue = require("queue");
+var testQueue = queue.getInstance("Q0NFNDkxODE4Mw==-requestChannel");
+return testQueue;
