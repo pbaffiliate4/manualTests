@@ -1,0 +1,2 @@
+ var mobilePush = require("mobile-push");
+return mobilePush.addToGroup("group12", ["c0_rjQyRDXc:APA91Gvs_IsTrZkt27H0F3XOzPCvb8snyxGLI5SFmbExNw5s9P2Dlt3BAY0hdL6WcoRjiMDFrunV7cRB4s82hu8I5qWLUMMKdyGaTlv1GliTXbVfz5zrmEvuaxukbgYII0O4hdWgXw-"]);			
