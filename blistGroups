@@ -1,0 +1,2 @@
+ var mobilePush = require("mobile-push");
+return mobilePush.listGroups();			
