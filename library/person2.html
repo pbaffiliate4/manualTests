@@ -1,0 +1,21 @@
+
+<html>
+  <head>
+  	<title> Person </title>
+    <link rel="stylesheet" type="text/css" href="../sisi.css?auth_token=Q0NFNDkxODE4Mw=="/>
+  </head>
+  
+  <body>
+    {{#person}}
+<h1>{{firstName}} {{lastName}}</h1> 
+ Blog: <a href={{blogURL}}>   link to bla  </a>
+{{/person}}
+    <br> Skills:<ul>{{#skills}}<li>{{.}}</li>{{/skills}}</ul>
+    
+    {{#data}}
+    <p>address: {{addres$s}}</p>{{city}}, {{state}} {{zip}} <br>{{email}} 
+    {{/data}}
+    
+
+  </body>
+</html>

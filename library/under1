@@ -1,0 +1,27 @@
+var _ = require("modules/underscore/underscore.js")._;
+var templateString = '<% if(modal["buttons"]) { %>\
+  <div class="ui-button-container">\
+    <% _(modal["buttons"]).each(function(button) { %>\
+      <a class="ui-button ui-button-pill <%= button.extra_class %> " href="<%= button.href %>">\
+        <span class="label">\
+          <span class="section"><%= button.label %></span> \
+        </span>\
+      </a>\
+    <% }) %>\
+  </div>\
+<% } %>';
+
+_data = {
+ "modal" : {
+    "title" : "Your address is:",
+    "description" : "Some desc here",
+    "buttons" : [
+       {'extra_class': 'small left', 'href' : '#register/3', 'label' : 'Back'},
+       {'extra_class': 'small center', 'href' : '#register/4',  'label' : 'Next'},
+       {'extra_class': 'small right', 'href' : '#', 'label' : 'Reset'}
+     ]
+   }
+ }
+var compiled = _.template(templateString);
+response.write(compiled(_data));
+response.close();

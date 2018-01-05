@@ -1,0 +1,25 @@
+var musta = require("modules/mustache/mustache.js").Mustache;
+var file =  require("file");
+var templateString = file.get("library/person2.html").result.content;
+
+var result =  musta.render(templateString,{
+      company: request.parameters.zoro ?  request.parameters.zoro : "Anonymous",
+        person: {
+    	firstName: "Christophe",
+    	lastName: "Coenraets",
+    	blogURL: "http://coenraets.org"
+				},
+	 data: {
+    addres$s: "1 Main street",
+    city: "Boston",
+    state: "MA",
+    zip: "02106",
+     email: "bruna.rizk@elementn.com"
+     },
+                              
+  skills: ['JavaScript', 'PHP', 'Java']                               
+      }); 
+response.setStatus(200);
+response.addHeaders(configuration.crossDomainHeaders);
+response.write(result);
+response.close();

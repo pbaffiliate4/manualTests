@@ -1,0 +1,27 @@
+var hogan = require("/modules/hogan/hogan.js").Hogan;
+var file =  require("file");
+var templateString = file.get("/library/person.tmplt").result.content;
+
+var template = hogan.compile(templateString);
+var result =  template.render({
+        
+        person: {
+    	firstName: "Christophe",
+    	lastName: "Coenraets",
+    	blogURL: "http://coenraets.org"
+				},
+	 data: {
+    addres$s: "1 Main street",
+    city: "Boston",
+    state: "MA",
+    zip: "02106",
+     email: "bruna.rizk@elementn.com"
+     },
+                              
+  skills: ['JavaScript', 'PHP', 'Java']                               
+      });
+
+response.setStatus(200);
+response.addHeaders(configuration.crossDomainHeaders);
+response.write(result);
+response.close();
