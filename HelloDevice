@@ -44,7 +44,7 @@ var scriptResponse = "Hello";
 if(storage.local.theName != null) scriptResponse += " " + storage.local.theName;
 if(country != null) scriptResponse += " from " + country;
 scriptResponse += "!";
-
+var x = 1;
 return scriptResponse;
 
 	
