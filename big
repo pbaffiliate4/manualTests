@@ -63,7 +63,7 @@ util.handleResponse(response, errorMessages, stopOnError, "pubsub.subscribe", sc
 response =  pubsub.subscribe("news","editor/sm","SCRIPT");
 util.handleResponse(response, errorMessages, stopOnError, "pubsub.subscribe", scriptName, "news_editor/sm");
 response =  schedule("stephanie","0 27 13 14 4 ?");
-util.handleResponse(response, errorMessages, stopOnError, "schedule", scriptName, "stephanie");
+util.handleResponse(response, errorMessages, stopOnError, "schedule", scriptName, "zaaatar");
 response =  schedule("stephanie","0 27 13 14 4 ?");
 util.handleResponse(response, errorMessages, stopOnError, "schedule", scriptName, "stephanie");
 response =  schedule("editor/scr",new Date("2018-02-21T12:08:28+0000").toISOString());
