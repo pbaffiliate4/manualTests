@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
-<body>
+  <body>
 
-<h2>JavaScript Comments are NOT Executed</h2>
+<h3>JavaScript Comments are NOT Executed at all</h3>
 
-<p id="demo"></p>
+<p id="demo1"></p>
 
 <script>
-var x;
-x = 5;
-// x = 6; I will not be executed
-document.getElementById("demo").innerHTML = x;
+var v;
+v = 7;
+// v = 9; I will not be executed
+document.getElementById("demo2").innerHTML = v;
 </script>
 
 </body>
