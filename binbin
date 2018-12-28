@@ -1,1 +1,1 @@
-(function(){ console.log('info')})();
+(function(){ console.log('debug')})();
