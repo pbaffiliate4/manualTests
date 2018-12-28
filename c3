@@ -6,7 +6,7 @@ var count =
     ['French',  1.66],
     ['Italian', 0.316],
     ['brazilian', 8.372],
-    ['Romansh', 0.0791]
+    ['Romansh', 0.07912]
 ]
 
 ;
