@@ -74,7 +74,7 @@ var content= '\n\
 		 	 .fail(function(response ) {\n\
 		 		var out = \"\";\n\
 			if(response.status == 0 && response.statusText == \"error\" && response.readyState == 0 && response.responseText == \"\"){\n\
-				out += \"An error has occurred. This is most likely a cross-domain issue. In case you modified the response object in your script, try adding response.addHeaders(configuration.crossDomainHeaders) to your code.\";\n\
+				out += \"An eoeoeoeoeoeoe has occurred. This is most likely a cross-domain issue. In case you modified the response object in your script, try adding response.addHeaders(configuration.crossDomainHeaders) to your code.\";\n\
 			}else{\n\
 				var output = response;\n\
 				if(response.responseJSON){\n\
