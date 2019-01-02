@@ -21,7 +21,7 @@ try {
     
     var taskToStart = null;
     for (var i = 0 ; i < tasks.length && !taskToStart; i++) {      
-      taskToStart = (tasks[i].name == taskName) ? tasks[i] : null;;
+      taskToStart = (tasks[i].name == taskName) ? tasks[i] : null;
     }
     
     if (taskToStart) { 
