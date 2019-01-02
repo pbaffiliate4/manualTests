@@ -5,7 +5,7 @@ var config = require("./config.js");
 /**
  * A generic http client that handles the communication with remote APIs
  * All subsequent operations made using the current instance are done on behalf of the user
- * @class Client
+ * @class Clientssssss
  * @constructor
  * @param {Object} [dto] : needed parameters
  * @param {String} [dto.username]: the name of the targeted user. 
@@ -43,7 +43,7 @@ HttpClient.prototype.callApi = function(params) {
   try {   
      return this._callApi(params);
   }catch(response) {
-   
+      
     if (response.metadata && (response.metadata.statusCode == "401" || response.metadata.statusCode == "403")) {    
     
       this._refreshSession();         

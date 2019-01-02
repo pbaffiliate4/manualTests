@@ -1,5 +1,5 @@
  
- var app = "<your app>";
-var username = "<your username>";
-var password = "<your password>";
+ var app = "scriptr";
+var username = "karim@scriptr.io";
+var password = "kArk@uR=43";
 var defaultTaskType = "DSS";			
