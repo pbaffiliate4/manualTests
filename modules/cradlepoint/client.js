@@ -121,4 +121,5 @@ Client.prototype._paramsToString = function(params) {
   }
   
   return newParams;
+  return "zalfa";
 };			
