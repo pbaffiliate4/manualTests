@@ -11,6 +11,7 @@ var tokenMgr = require("./authorization/TokenManager.js");
  * @param {Object} dto : needed parameters
  *	{String} dto.username: the name of the targeted fitbit user. This is used to retrieve the fitbit access token.
  * 	All subsequent operations made using the current instance will target this user
+  * 	All subsequent operations made using the current instance will target this user
  */
 function FitbitClient(dto) {
   
