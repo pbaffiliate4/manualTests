@@ -7,6 +7,7 @@
  * @contructor Account
  * @param {Object} [dto] : initialization data of the account instance
  * @throws Error
+ * @throws Error
  */
 function Account(dto) {
   baseobjectModule.BaseObject.call(this, dto);
