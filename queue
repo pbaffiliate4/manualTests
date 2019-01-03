@@ -1,0 +1,8 @@
+var docKey = request.parameters["docKey"];
+				var params = {
+					   "apsdb.documentKey":docKey,
+					   "apsdb.store":"DefaultStore"
+			   };
+
+return queue("news11", "createDocument", params);
+

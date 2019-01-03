@@ -1,0 +1,2 @@
+ //var mobilePush = require("mobile-push");
+return pushToGroup("group1", "i am add messaage");			

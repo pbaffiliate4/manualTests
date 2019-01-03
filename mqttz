@@ -1,0 +1,14 @@
+var mqtt = require("mqtt");
+var rootCa = request.files["rootCa"][0];
+var key = request.files["key"][0];
+var certificate = request.files["certificate"][0];
+
+var options = {
+	    "rootCa":rootCa,
+	    "key":key,
+	    "certificate":certificate,
+	    "passphrase":"123123"
+};
+var myMqtt = mqtt.getInstance("mqtts://bridges-test.scriptr.io:8885", options);
+return myMqtt.publish("test-topic", "ho ha hi!");
+myMqtt.close();

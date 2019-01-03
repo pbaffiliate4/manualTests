@@ -1,0 +1,8 @@
+var mqtt = require("mqtt");
+var options={
+	
+};
+var myMqtt = mqtt.getInstance("caro");
+var res = myMqtt.publish("topic", "..............");
+myMqtt.close();
+return res;

@@ -1,0 +1,4 @@
+
+var mqtt = require("mqtt");
+var myMqtt = mqtt.getInstance("nameeeAzureTahtah");
+return myMqtt.publish("devices/myFirstNodeDevice/messages/events/readpipe", "{'Message' : 'mess'}");

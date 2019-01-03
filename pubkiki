@@ -1,0 +1,18 @@
+var mqtt = require("mqtt");
+var broker = request.parameters.broker;
+var topic = request.parameters.topic;
+var passphrase = request.parameters.passphrase;
+var rootCa = request.files["rootCa"][0];
+var key = request.files["key"][0];
+var certificate = request.files["certificate"][0];
+
+var options = {
+	    "rootCa":rootCa,
+	    "key":key,
+	    "certificate":certificate,
+	    "passphrase":passphrase
+};
+var myMqtt = mqtt.getInstance(broker, options);
+var res = myMqtt.publish(topic, "ho ha hi!");
+myMqtt.close();
+return res;

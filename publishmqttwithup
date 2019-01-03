@@ -1,0 +1,16 @@
+var log = require("log");
+log.setLevel("info");
+
+    var endpoint = "tcp://bridges-test.scriptr.io:8884";
+    var topic = "test";
+    var username = "";
+    var password = "";
+    var clientId = "clientid";
+     
+
+
+var mqtt = require("mqtt");
+return mqtt.publish("tcp://bridges-test.scriptr.io:8884", topic, "some message", {"username": "root", "password": "NMJCEVscd/3x_Ab2", "clientId": clientId});
+
+var log = require("log");
+log.setLevel("info");

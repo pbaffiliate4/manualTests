@@ -1,0 +1,3 @@
+var mqtt = require("mqtt2");
+var myMqtt = mqtt.getInstance("AzureListen");
+myMqtt.close();

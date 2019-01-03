@@ -1,0 +1,2 @@
+var digest = md5("someString");
+return digest;

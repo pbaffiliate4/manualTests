@@ -1,0 +1,4 @@
+ var message = '{"Content":"once i caught a fish alive"}';  
+var arrayDevices = ["ewOt4rKcBqo:APA91bFjVPXfT39QRrQ0Jz83lSDqYopnmtCn615Ne08Th9eyVFAPTCMb2SxUWoQIzGPKjPTq0n3ugS6i3V1PwPTAQl344Bo89b-_S252wVn_Z6JxFtxnU2Gk6n-AWGTxdxMu3ZCcODEU"];
+var deviceType = "android";
+return push(arrayDevices, message, deviceType);   							

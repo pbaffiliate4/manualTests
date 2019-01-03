@@ -1,0 +1,10 @@
+ 
+//var log = require("log");
+//log.setLevel("info");
+
+    var endpoint = "tcp://bridges-test.scriptr.io";
+    var topic = "test";
+    var clientId = "scriptrio_client";
+
+        var mqtt = require("mqtt");
+return mqtt.publish("ssl://bridges-test.scriptr.io", topic, "some messages", {"rootCa": request.files.rootCa[0]});

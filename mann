@@ -1,0 +1,14 @@
+//var mockServerPort = "9020";
+//var mockServerHost = "hudson.scriptr.io";
+//var path = "/testPatch";
+//var url = "http://hudson.scriptr.io:9020/testPatch";
+var http = require("http");
+var http = require("log");
+ var options = {
+       url: "http://hudson.scriptr.io:9020/testPatch",
+       method: "PATCH"
+    };
+log.error(options);
+
+var response1 = http.request(options);
+return response1;

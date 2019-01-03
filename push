@@ -1,0 +1,2 @@
+ //var mobilePush = require("mobile-push");
+return mobilePush.push(["dFFciRm18eI:APA91bEgX3FobjpsdODoBJoxqmsv0LlUhUSV4dC73fsvox51oUVgKZUbqKno9l6ddfPzCH0EisK7HNOtuqhHt3gfR9PkSgNAobIkLQQ1nK5IowdHNjwVVXmGp4RNBRyqPTywmNvJd4LY"], "message ballouta", "android", false);			

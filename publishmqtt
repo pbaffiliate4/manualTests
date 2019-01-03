@@ -1,0 +1,7 @@
+ 
+    var endpoint = "tcp://bridges-test.scriptr.io";
+    var topic = "test";
+
+        var mqtt = require("mqtt");
+return mqtt.publish("tcp://bridges-test.scriptr.io", topic, "some message");
+
