@@ -1,0 +1,8 @@
+var params = {
+"apsdb.name" : "scriptToUpdate",
+"apsdb.update" : "true",
+"apsdb.content" : '{"contentType":"application/vnd.scriptr-javascript","content":"return 20;"}'
+}
+return runAs(function(){
+return apsdb.callApi("SaveFile", params, null);
+}, "bassem");

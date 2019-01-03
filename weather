@@ -1,0 +1,31 @@
+// require the "http" module
+var http = require("http");
+// build a request. You should at least provide the "url" field
+ var headers = {"ConTent-LEngTh":"3495"};    
+         
+var requestObject = {
+    "url" : "https://samples.openweathermap.org/data/2.5/weather",
+    "headers" : headers,
+    "params" : {
+        "q" : "london,uk",
+        "appid": "b6907d289e10d714a6e88b30761fae22"
+    },
+    "method" : "GET" // optional if GET
+}
+
+    
+// send the request by invoking the request function
+// of the http module and store the returned response object
+var response = http.request(requestObject);
+// get the body of the response as a string
+var responseBodyStr = response.body;
+// check the status of the responseh
+if (response.status == "200") {
+    // manipulate the response headers
+    if (response.headers["Content-Type"].indexOf("application/json") > -1) {
+        return JSON.parse(responseBodyStr);
+    }
+    return responseBodyStr;
+} else {
+    return "Remote API returned an error " + response.status;
+}

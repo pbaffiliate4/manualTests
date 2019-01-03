@@ -1,0 +1,4 @@
+var subdomainss = require("subdomain");
+var resp =  subdomainss.create("mouaawwak");
+return resp;
+return subdomainss.list();
