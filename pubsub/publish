@@ -1,0 +1,3 @@
+ var pubsub = require("pubsub");return pubsub.publish("channel1", "published message");	
+//return pubsub.publish("channelEnt", "hello");
+		
