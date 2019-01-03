@@ -1,0 +1,69 @@
+var documents = require("document");
+import("agnes.DeviceRepositoryAdaptor");
+
+var VersionableDeviceRepositoryAdaptor = Class(DeviceRepositoryAdaptor, {
+  
+  constructor: function(config) {
+    VersionableDeviceRepositoryAdaptor.$super.call(this, config);
+  },   
+  
+  update: function(device) {
+
+    var transaction = apsdb.beginTransaction();
+    try {
+
+      VersionableDeviceRepositoryAdaptor.$superp.update(device, true);      
+      var obj = this.prepareStructureToSave(device, true);
+
+      // create a document based on the latest device state
+      var objClone = JSON.parse(JSON.stringify(obj));
+      delete objClone.password; // do not save the password in the document, as not part of the device state
+      var responseObj = apsdb.callApi("SaveDocument", objClone, null);
+      if (responseObj.metadata.status=="failure") {
+
+        logger.error("VersionableDeviceRepositoryAdaptor failed to update device: " +  JSON.stringify(responseObj.metadata));
+        throw (responseObj.metadata);
+      }
+
+      transaction.commit();
+      return true;
+    }catch(exception) {
+      
+      logger.error("VersionableDeviceRepositoryAdaptor failed to update device: " +  JSON.stringify(exception));
+      if (transaction){
+        transaction.rollback();
+      }
+
+      throw exception;
+    }     
+  },
+  
+  /**
+   * Load historical data for the given device id
+   * @param {String} id: the identifier of the device
+   * @param {String} fields: optional, comma separated list fo fields to return
+   * @param {Number} pageNumber: optional, indicates the number of the page in case there is a large number of documents
+   * @param {Date} date: optional, 
+   * @return {Array} list of device documents
+   */
+  loadDataSeries: function(id, fields, pageNumber, date) {
+    
+    var requestObject = {
+      
+      "query":'id = "'+ id + '"', // + (date ? ' and apsdb.lastModifiedDate<date> > ' + date.toISOString() : ''), 
+      "sort":"creationDate<date:DESC>", 
+      "fields": fields ? fields  + ",lastModifiedDate": "*", 
+      "includeFieldType":true
+    };   
+    
+    var responseObj = documents.query(requestObject);
+    if (responseObj.metadata.status == "failure") {
+      
+      logger.error("VersionableDeviceRepositoryAdaptor failed to load data series for device(" + id + ")"  + JSON.stringify(responseObj.metadata));
+      throw (responseObj.metadata);
+    }
+    
+    this._logText("Query historical data", requestObject, responseObj);
+    return responseObj.result.documents;
+  }
+});
