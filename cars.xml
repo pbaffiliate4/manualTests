@@ -1,0 +1,16 @@
+ var data = [['', 'Your Grades', 'Other Grades'],
+        ['Question number 0 oh lala',  100/100, 120/100],
+        ['Question number 2 oh lala',  14/100, 15/100],
+        ['Question number 3 oh lala',  13-13, 12-13],
+        ['Question number 4 oh lala',  13+6, 12*6],
+		['Question number 5 oh lala',  66, 55],
+        ['Question number 6 oh lala',  43, 77]];
+
+var data2 = [['', 'Your Grades2', 'Other Grades2'],
+        ['Question number 0 oh lala',  100/100, 120/100],
+        ['Question number 2 oh lala',  14/100, 15/100],
+        ['Question number 3 oh lala',  19-13, 12-13],
+        ['Question number 4 oh lala',  13+6, 12*6],
+		['Question number 5 oh lala',  66, 55],
+        ['Question number 6 oh lala',  43, 77]];
+return data;

@@ -1,0 +1,8 @@
+          	
+               var params = {
+            		   "apsdb.documentKey":"doc1",
+            		   "apsdb.store":"DefaultStore"
+               };
+
+               var result = apsdb.callApi("SaveDocument", params, null);
+               return result;

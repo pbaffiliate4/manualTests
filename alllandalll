@@ -1,0 +1,12 @@
+var pubsub = require("pubsub");
+
+pubsub.getTopicInstance("news").getStatistics;
+pubsub.getTopicInstance("news").publish;
+pubsub.getTopicInstance("news").subscribe;
+pubsub.getTopicInstance("news").unsubscribe;
+
+
+pubsub.getQueueInstance("news").clear;
+pubsub.getQueueInstance("news").peek;
+pubsub.getQueueInstance("news").getStatistics;
+pubsub.getQueueInstance("news").queue;

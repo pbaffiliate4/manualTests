@@ -1,0 +1,5 @@
+var redis = require("redis");
+var redisInstance = redis.getInstance("mawmaw");
+// RediZZZZZZZZZZZZZZZZZZZZZZZZZZ 
+return redisInstance.set("key1", "value1");
+return redisInstance.get("key1");
