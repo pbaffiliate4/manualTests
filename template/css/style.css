@@ -1,0 +1,53 @@
+body {background: #f2f2f2; font-family: 'Source Sans Pro';}
+
+/*** header ***/
+header {
+  padding: 8px 0;
+  background: #313131; 
+}
+
+a {color: #ff8c00;}
+a:focus, a:hover {color: #ED7C00;}
+
+/*** Page title ***/
+.lead-title {
+  	font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: #333;
+}
+
+.header-strips-one {
+  	border-top: 1px solid #444;
+    height: 1px;
+    margin: 0 auto 19px;
+    position: relative;
+    width: 70px;
+}
+
+/*** Override boostrap button styles ***/
+.btn-default {
+  background: #ff8c00;
+  border: none;
+  color: #fff;
+}
+
+.btn-default:hover, .btn-default:active, .btn-default:focus, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover  {
+  background: #e4710d;
+  color: #fff;
+  border: none;
+  outline: 0;
+}
+
+h3 { font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: #616161;
+  text-decoration: underline;
+}
+iframe {margin-top: 10px;}
+.content-wrap a {margin-right: 40px;}
+.content-wrap a:link, .content-wrap a:visited {border-bottom: 1px dotted #ff8c00;}
+.content-wrap a:hover, .content-wrap a:active {text-decoration: none; opacity: 0.9;}
+.content-wrap > div {display: inline-block; width: 100%;}
+.content-wrap > div:nth-child(odd) {background: #f9f9f9;}
