@@ -1,0 +1,18 @@
+import("framr.AbstractRepositoryAdaptor")
+import("devicemodels.Device")
+import("devicemodels.Location")
+
+var DeviceRepositoryAdaptor = Class(AbstractRepositoryAdaptor, {
+  constructor: function(config) {
+    DeviceRepositoryAdaptor.$super.call(this, config)
+    logger.debug("instantiating Agnes adaptor")
+  },
+  
+  _saveDevice: function(device, update) {
+    if (!(device instanceof Device)) {
+      	var _errText = "DeviceRepositoryAdaptor._saveDevice - parameter device should be an instance of devices.Device"
+        logger.error(_errText)
+	    throw(_errText)
+    }
+  }
+})

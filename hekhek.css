@@ -1,0 +1,29 @@
+ /*#*SCRIPTR_PLUGIN*#*{"metadata":{"name":"CodeMirrorArbitraryFile","plugindata":{"fileData":"<style>\n#header {\n    background-color:black;\n    color:white;\n    text-align:center;\n    padding:5px;\n}\n#nav {\n    line-height:30px;\n    background-color:#eeeeee;\n    height:300px;\n    width:100px;\n    float:left;\n    padding:5px; \n}\n#section {\n    width:350px;\n    float:left;\n    padding:10px; \n}\n#footer {\n    background-color:black;\n    color:white;\n    clear:both;\n    text-align:center;\n    padding:5px; \n}\n</style>"},"scriptrdata":[]}}*#*#*/
+var content= '<style>\n\
+#header {\n\
+    background-color:black;\n\
+    color:white;\n\
+    text-align:center;\n\
+    padding:5px;\n\
+}\n\
+#nav {\n\
+    line-height:30px;\n\
+    background-color:#eeeeee;\n\
+    height:300px;\n\
+    width:100px;\n\
+    float:left;\n\
+    padding:5px; \n\
+}\n\
+#section {\n\
+    width:350px;\n\
+    float:left;\n\
+    padding:10px; \n\
+}\n\
+#footer {\n\
+    background-color:black;\n\
+    color:white;\n\
+    clear:both;\n\
+    text-align:center;\n\
+    padding:5px; \n\
+}\n\
+</style>'; var response = apsdb.httpRespond(); response.write(content);response.close();			

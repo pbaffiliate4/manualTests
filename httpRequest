@@ -1,0 +1,13 @@
+		var apiResponse = null;
+		var http = require("http");  
+		// First call to this script will call this script again POSTing a file that was posted to this script 
+		// and an file attached to an existing doc
+		var options = {
+				"callURI": request.parameters.callURI,
+				"filePath": { "newFile" : [ request.files.newFile]},
+				"method": "PUT"
+		};
+		
+			apiResponse = http.request(options);
+//			apsdb.log.debug(" apiResponse apiResponse", apiResponse);
+		//	return {"putOK" : (apiResponse.status != null && apiResponse.status.indexOf("200") > -1)};

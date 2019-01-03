@@ -1,0 +1,6 @@
+var log = require("log");
+log.setLevel("info"); //levels are ERROR | WARN | INFO | DEBUG | OFF
+//log.error("This is the error message of the script");
+//log.warn("This is the warning message of the script");
+log.info("This is the info message of the script");
+//log.debug("This is the debug message of the script");

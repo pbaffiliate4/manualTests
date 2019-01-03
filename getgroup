@@ -1,0 +1,3 @@
+ 
+var mobilePush = require("mobile-push");
+return mobilePush.getGroup("group1");			

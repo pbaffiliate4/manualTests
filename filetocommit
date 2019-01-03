@@ -1,13 +1,16 @@
-
 var documents = require("document");
 import("agnes.DeviceRepositoryAdaptor");
 
 var VersionableDeviceRepositoryAdaptor = Class(DeviceRepositoryAdaptor, {
+  
+    
+    
+    
   constructor: function(config) {
     VersionableDeviceRepositoryAdaptor.$super.call(this, config);
   },   
   
-  update: function(device) {
+  update: function(doudou) {
 
     var transaction = apsdb.beginTransaction();
     try {
@@ -17,7 +20,7 @@ var VersionableDeviceRepositoryAdaptor = Class(DeviceRepositoryAdaptor, {
 
       // create a document based on the latest device state
       var objClone = JSON.parse(JSON.stringify(obj));
-      delete objClone.passwordzeye; // do not save the password in the document, as not part of the device state
+      delete objClone.password; // do not save the password in the document, as not part of the device state
       var responseObj = apsdb.callApi("SaveDocument", objClone, null);
       if (responseObj.metadata.status=="failure") {
 
@@ -29,10 +32,6 @@ var VersionableDeviceRepositoryAdaptor = Class(DeviceRepositoryAdaptor, {
       return true;
     }catch(exception) {
 
-      transaction.commit();
-      return true;
-    }catch(exception) {
-    
       logger.error("VersionableDeviceRepositoryAdaptor failed to update device: " +  JSON.stringify(exception));
       if (transaction){
         transaction.rollback();
@@ -46,19 +45,18 @@ var VersionableDeviceRepositoryAdaptor = Class(DeviceRepositoryAdaptor, {
    * Load historical data for the given device id
    * @param {String} id: the identifier of the device
    * @param {String} fields: optional, comma separated list fo fields to return
-   * @param {String} ust acomment
    * @param {Number} pageNumber: optional, indicates the number of the page in case there is a large number of documents
    * @param {Date} date: optional, 
    * @return {Array} list of device documents
    */
-  loadDataSeries: function(id, fields, pageNumber,     date) {
+  loadDataSeries: function(id, fields, pageNumber, date) {
     
     var requestObject = {
       
       "query":'id = "'+ id + '"', // + (date ? ' and apsdb.lastModifiedDate<date> > ' + date.toISOString() : ''), 
       "sort":"creationDate<date:DESC>", 
       "fields": fields ? fields  + ",lastModifiedDate": "*", 
-      "includeFieldType":true
+      "includeFieldType":false
     };   
     
     var responseObj = documents.query(requestObject);
