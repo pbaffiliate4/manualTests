@@ -1,0 +1,2 @@
+ /*#*beginblockly*#*<xml xmlns="http://www.w3.org/1999/xhtml"><block type="scriptr_return" id="1" inline="false" x="43" y="94"><value name="return"><block type="text" id="2"><field name="TEXT">shine on you crazy diamond</field></block></value></block></xml>*#*#*/
+return 'shine on you crazy diamond'			

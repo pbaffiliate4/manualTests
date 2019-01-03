@@ -1,21 +1,19 @@
- var scriptName='script_11';
+ var scriptName='script_1';
  var stores = require("store");
  var pubsub = require("pubsub");
- var device = require("device");
  var util = require("./util");
  function run(stopOnError, errorMessages){ 
  var parameters="";
  var response=""; 
-parameters={"groupName":"hooks-Write"};
-util.callApi("SaveGroup", parameters, null, errorMessages, stopOnError, scriptName, "hook-Write");
+parameters={"groupName":"Hook-Write"};
+util.callApi("SaveGroup", parameters, null2, errorMessages, stopOnError, scriptName, "hook-Write", "hayallachi");
 parameters={"groupName":"hook-write"};
-util.callApi("SaveGroup", parameters, null, errorMessages, stopOnError, scriptName, "hook-write", "anythingup");
+util.callApi("SaveGroup", parameters, nulle, errorMessages, stopOnError, scriptName, "hook-write");
 parameters={"groupName":"list"};
 util.callApi("SaveGroup", parameters, null, errorMessages, stopOnError, scriptName, "list");
 parameters={"groupName":"manage"};
 util.callApi("SaveGroup", parameters, null, errorMessages, stopOnError, scriptName, "manage");
 parameters={"groupName":"nameofgroup"};
-parameters={"groupName":"nameoffafa"};
 util.callApi("SaveGroup", parameters, null, errorMessages, stopOnError, scriptName, "nameofgroup");
 parameters={"groupName":"script-execute"};
 util.callApi("SaveGroup", parameters, null, errorMessages, stopOnError, scriptName, "script-execute");
@@ -29,7 +27,7 @@ var channel_options={  "subscribeACL": "anonymous", "publishACL": "anonymous" }
 response =  pubsub.createChannel("myaw2",channel_options);
 util.handleResponse(response, errorMessages, stopOnError, "pubsub.createChannel", scriptName, "myaw2");
 response =  pubsub.subscribe("myaw2","3aw","SCRIPT");
-util.handleResponse(response, errorMessages, stopOnError, "pubsub.subscribe", scriptName, "myaw23aw");
+util.handleResponse(response, errorMessages, stopOnError, "pubsub.subscribe", scriptName, "myaw2_3aw");
 var channel_options={  "subscribeACL": "anonymous", "publishACL": "anonymous" }
 response =  pubsub.createChannel("aws-bridge-channel",channel_options);
 util.handleResponse(response, errorMessages, stopOnError, "pubsub.createChannel", scriptName, "aws-bridge-channel");
@@ -47,7 +45,7 @@ util.handleResponse(response, errorMessages, stopOnError, "pubsub.subscribe", sc
 response =  pubsub.subscribe("news","blistGroups","SCRIPT");
 util.handleResponse(response, errorMessages, stopOnError, "pubsub.subscribe", scriptName, "news_blistGroups");
 response =  pubsub.subscribe("news","_hhh/chart/bob2","SCRIPT");
-util.handleResponse(response, errorMessages, stopOnError, "pubsub.subscribe", scriptName, "news__hhh/chart/bob2");
+util.handleResponse(response, errorMessages, stopOnError, "pubsub.subscribe", scriptName, "news__hhh/chart/bob555");
 response =  pubsub.subscribe("news","queue","SCRIPT");
 util.handleResponse(response, errorMessages, stopOnError, "pubsub.subscribe", scriptName, "news_queue");
 response =  pubsub.subscribe("news","createDocument2","SCRIPT");
@@ -63,7 +61,7 @@ util.handleResponse(response, errorMessages, stopOnError, "pubsub.subscribe", sc
 response =  pubsub.subscribe("news","editor/sm","SCRIPT");
 util.handleResponse(response, errorMessages, stopOnError, "pubsub.subscribe", scriptName, "news_editor/sm");
 response =  schedule("stephanie","0 27 13 14 4 ?");
-util.handleResponse(response, errorMessages, stopOnError, "schedule", scriptName, "zaaatar");
+util.handleResponse(response, errorMessages, stopOnError, "schedule", scriptName, "stephanie");
 response =  schedule("stephanie","0 27 13 14 4 ?");
 util.handleResponse(response, errorMessages, stopOnError, "schedule", scriptName, "stephanie");
 response =  schedule("editor/scr",new Date("2018-02-21T12:08:28+0000").toISOString());

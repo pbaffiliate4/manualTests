@@ -1,0 +1,12 @@
+var body = request.rawBody;
+var user = request.user;
+
+var params = {
+		"body": body,
+		"user": JSON.stringify(user),
+		"apsdb.documentKey":"extDocKey2",
+		"apsdb.store":"DefaultStore"
+};
+
+var result = apsdb.callApi("SaveDocument", params, null);
+return result;
