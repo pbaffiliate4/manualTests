@@ -1,0 +1,158 @@
+	<div class="loading-container"  style="display: none">
+		<div class="col-xs-12 text-center pdt15">
+			<span class="loading"></span>
+		</div>
+	</div>
+	<div class="warningMessage col-xs-12 center-div alert fadeIn animated alert-warning" style="display: none">
+
+	</div>
+	<div class='panelContent'>
+		<div class="col-sm-12 bg-light-grey events-bar mt10">
+			<h5  class="event-button">
+				<a href="javascript:void(0)" class='actionBtn {{#if actionIsDisabled}} disabled {{/if}}'><i class="fa fa-plus-square"></i> {{actionTitle}} </a>
+			</h5>
+			<a href="javascript:void(0);" tabindex="0" class="all-popovers" data-trigger="focus" data-placement="right" role="button" 
+				data-toggle="popover" title="" data-content="{{actionHelp}}">
+				<i class="fa fa-question-circle"></i>
+			</a>
+		</div>
+		
+		<div class="panelEmptyMessage col-xs-12 center-div" style="display: none">
+					You do not have any channels yet.
+					Create channels to enable real-time communication.
+		</div> 
+		
+		<div  class="errorMessage col-xs-12 center-div alert fadeIn animated alert-danger text-center" style="display: none">
+			An internal error occured.
+		</div>
+			
+		<!-- begin channel list -->
+	<div class="widget-list" style="display:none"> 
+		<ul id='listItems'>
+				<li class="list-item">
+					<div class="editMode">
+						<div class="col-sm-9 col-md-10 pdl0">									
+								<div class="row">
+									<form  method="POST" class="form-horizontal lightFormValidation channel-form" onsubmit="return false;">
+										<div class="col-sm-4 pdr0 channel-title">
+											<div class="col-sm-12 viewChannelNameEditMode break pdl0 mt5" style="display:none"></div>
+									  		 <div class="form-group mb5 col-sm-12 pdr0">
+												<input name="channelName" data-bv-field="channelName" type="text" class="form-control channelName" placeholder="Channel name"/>
+											</div>
+									    </div>
+										<div class="col-md-4 col-sm-12 pdr0 pdt7 manage-channel selected hide">
+												<a href="javascript:void(0);"><i class="fa fa-caret-right"></i><i class="fa fa-caret-down"></i>	Manage publishers</a>
+										</div>										
+										<div class="col-md-4 col-sm-12 pdr0 pdt7 manage-channel hide">
+												<a href="javascript:void(0);"><i class="fa fa-caret-right"></i><i class="fa fa-caret-down"></i>	Manage subscribers</a>
+										</div>										
+										<div class="col-md-4 col-sm-12 pdr0 pdl0">
+											<div class="checkbox checkbox-warning">
+												<input type="checkbox" name="publishAcl"  class="publishAcl" id="anonymous1"> 
+												<label class="label-script-acl fnt13" for="anonymous1">Allow anonymous publishing</label>
+											</div>
+										</div>										
+										<div class="col-md-4 col-sm-12 pdr0 pdl0">
+											<div class="checkbox checkbox-warning">
+												<input type="checkbox" name="subscribeAcl" class="subscribeAcl"  id="anonymous2">
+												<label class="label-script-acl fnt13" for="anonymous2">Allow anonymous subscription</label>
+											</div>
+										</div>
+									</form>									
+						   		</div>
+								
+						</div>
+						<div class="col-sm-3 col-md-2 pdr0 pdl0">
+							<div class="editable-buttons pull-right">
+								<div class="loading" style="display:none;"></div>
+								<button type="button" class="btn btn-primary btn-sm editable-submit">
+									<i class="glyphicon glyphicon-ok"></i>
+								</button>
+								<button type="button" class="btn btn-default btn-sm editable-cancel">
+									<i class="glyphicon glyphicon-remove"></i>
+								</button>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					
+				 <div class="viewMode"> 
+					<div class="col-sm-10 pdl0">
+							<div class="row">
+								<div class="col-sm-7 viewChannelName" ></div>
+								<div class="col-md-5 col-sm-12 viewModeMessage">Authenticated can publish</div>		
+								<!--<div class="col-md-4 col-sm-12 viewSubscribe">Authenticated can subscribe</div>-->								
+								
+							</div>
+					</div>
+					<div class="pull-right">
+					
+					
+				<div class="btn-group group-action-btns">
+					  <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    <i class="fa fa-gear"></i>    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu dropdown-menu-right">
+						<li>
+								<a href="javascript:void(0);" class="bridges-icon item-sub bridgesList">
+									<span class="fa-stack"><i class="fa fa-globe fa-stack-2x"></i><i class="fa fa-mail-reply fa-rotate-90 fa-stack-1x"></i></span>
+									Manage bridges
+								</a>
+						</li>
+						<li>
+								<a href="javascript:void(0);" class="scriptingList item-sub">
+											<i class="fa fa-file-code-o"></i> Manage scripts
+								</a>
+						</li>
+						<li>
+								<a href="javascript:void(0);" class="viewModeEdit">
+											<i class="fa fa-unlock-alt"></i> Manage ACL permissions
+								</a>
+						</li>
+						<li>
+								<a href="javascript:void(0);" class="viewModeDelete">
+											<i class="fa fa-trash-o"></i> Delete
+								</a>
+						</li>
+						<li class="hide">
+							<a href="javascript:void(0);" class="grpList item-sub">
+								<i class="fa"><img src="/themes/scriptr/images/tokens.png" class="token-unselected" /><img class="token-selected" src="/themes/scriptr/images/token-selected.png" /></i>
+								Manage groups
+							</a>
+						</li>
+					</ul>
+				</div>
+					
+					
+					
+						
+					</div>
+
+					<div class="scripts-listing tokens-listing col-xs-12  grpListData" style="display:none">
+					</div>
+					
+					<div class="scripts-listing col-xs-12 scriptingListData" style="display:none">
+					</div>
+	
+					<div class="scripts-listing col-xs-12 manageBridges" style="display:none">
+					</div>
+				</div>
+				
+				<div class="channelConfirmation col-xs-12 center-div alert fadeIn animated alert-danger" style="display:none">
+					<div class="col-xs-9 pdl0">
+							<div class="mt8 ml10"><span class="confirmationMessage">Are you sure you want to delete the channel?</span>
+							<div class="loadingMessage"><span class="loadingText"></span>Deleting channel... </div></div>
+					</div>
+					<div class="col-xs-3 pdr0 text-right confirmationButtons">
+						<button type="button" class="btn btn-default btn-sm cancelDelete mr5">No</button>
+						<button type="button" class="btn btn-primary btn-sm confirmDelete" >Yes</button>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	
+
+
+	</div>

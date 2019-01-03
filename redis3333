@@ -1,0 +1,9 @@
+var params = {
+  'apsdb.name': 'redis-7',
+  'protocol': 'redis',
+  'apsdb.url': 'localhost',
+  'testOnBorrow':'true'
+}
+
+var response = apsdb.callApi("SaveExternalEndpointConfiguration", params, null);
+return response;

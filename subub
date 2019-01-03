@@ -1,0 +1,3 @@
+ var messaging = require("messaging");
+
+return messaging.subscribe("channelTechnology","callback","bab/ajjjj/fffff");			

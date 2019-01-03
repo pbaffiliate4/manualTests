@@ -1,0 +1,6 @@
+ console.log(storage.global.whatever instanceof Array)
+var bal = "sssss"; //(test 3)
+var antar = require("test");
+
+
+antar.test = "shiteneh"; //(test 2)			

@@ -1,0 +1,13 @@
+var redis = require('redis');
+
+var endpoint = "redisIns";
+var redislala = redis.getInstance(endpoint);
+return redislala;
+
+var mySet = "mySet40";
+
+redislala.sadd(mySet, 'january');
+redislala.sadd(mySet, 'february');
+redislala.sadd(mySet, 'march');
+
+return redislala.smembers(mySet);

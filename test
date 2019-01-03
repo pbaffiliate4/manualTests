@@ -1,0 +1,3 @@
+ console.log(storage.global.whatever instanceof Array)
+console.log(bal); //(test3)
+var test = "souraya";			

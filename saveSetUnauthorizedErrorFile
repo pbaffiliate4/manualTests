@@ -1,0 +1,6 @@
+//var scriptName = request.parameters.scriptName;
+//var scriptName = request.files["wishYouWereHere"][0];
+var configuration = require("configuration");
+var result = configuration.setUnauthorizedErrorFile("scriptName");
+
+return result;

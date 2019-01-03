@@ -1,0 +1,10 @@
+
+
+
+
+
+return runAs(function(){
+    var defaultStoreDocuments = require("document");
+	var myStoreDocuments = defaultStoreDocuments.getInstance("store");
+	return myStoreDocuments.create({"key" : "key123", "meta.schema":"schemaForRunAs" , "name":"ebbes"});
+}, "wsdev");
