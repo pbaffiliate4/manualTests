@@ -4,7 +4,7 @@
 
 <h2>What Can JavaScript Do?</h2>
 
-<p id="demo">JavaScript can hide HTML eklements.</p>
+<p id="demo">JavaScript can hide HTMLesd eklements.</p>
 
 <button type="button" onclick="document.getElementById('demo').style.display='none'">Click Me!</button>
 
