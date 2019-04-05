@@ -1,0 +1,5 @@
+     function get() {
+    	 return a=a;
+     }
+
+//var x=b;

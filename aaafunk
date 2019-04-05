@@ -1,0 +1,2 @@
+var d = require("kousa");
+return d.get();
