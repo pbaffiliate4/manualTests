@@ -1,0 +1,32 @@
+require("/modules/framr/Framr").init(this, {classPath: "./modules/;"});
+
+import("devicemodels.Device")
+import("agnes.VersionableDeviceRepositoryAdaptor");
+
+try {
+  
+  var adaptor = new VersionableDeviceRepositoryAdaptor();
+  var id = "porsche";
+  var device = new Device({
+    adaptor: adaptor,
+    model: {
+      id: id,
+      name: id,
+      seats: 4,
+      location: new Location(),
+      lastUpdate: Date()
+    }
+  });
+
+  //adaptor.save(device);
+  //device.lastUpdate = Date();
+  //adaptor.update(device);
+
+
+  //adaptor.load(id);
+  //adaptor.query({attributes: "*"});  
+  adaptor.loadDataSeries(id);
+  logger.log("works");
+}catch(exception){
+  return exception;
+}

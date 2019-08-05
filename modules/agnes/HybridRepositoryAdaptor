@@ -1,0 +1,6 @@
+import("agnes.DeviceRepositoryAdaptor")
+import("devices.Device")
+import("devices.Location")
+
+var HybridRepositoryAdaptor = Class(DeviceRepositoryAdaptor, {
+})
