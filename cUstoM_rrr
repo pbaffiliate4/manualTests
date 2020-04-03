@@ -1,0 +1,22 @@
+Blockly.Blocks['llength99'] = {
+  /**
+   * Block for string length.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.setHelpUrl(Blockly.Msg.TEXT_LENGTH_HELPURL);
+    this.setColour(120);
+    this.interpolateMsg(Blockly.Msg.TEXT_LENGTH_TITLE,
+                        ['VALUE', ['String', 'Array'], Blockly.ALIGN_RIGHT],
+                        Blockly.ALIGN_RIGHT);
+    this.setOutput(true, 'Number');
+    this.setTooltip(Blockly.Msg.TEXT_LENGTH_TOOLTIP);
+  }
+};
+
+Blockly.JavaScript['llength99'] = function(block) {
+  // String length.
+  var argument0 = Blockly.JavaScript.valueToCode(block, 'VALUE',
+      Blockly.JavaScript.ORDER_FUNCTION_CALL) || '\'\'';
+  return [argument0 + '.length', Blockly.JavaScript.ORDER_MEMBER];
+};
