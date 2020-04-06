@@ -10,7 +10,7 @@ look like:
   * that one
   * the other one
 
-Note that --- not considering the asterisk --- the actual text
+Note that --- not considkj lkj lkjering the asterisk --- the actual text
 content starts at 4-columns in.
 
 > Block quotes are
@@ -33,6 +33,7 @@ Here's a numbered list:
  1. first item
  2. second item
  3. third item
+ 4. kjhk hk kh 
 
 Note again how the actual text starts at 4 columns in (4 characters
 from the left side). Here's a code sample:
