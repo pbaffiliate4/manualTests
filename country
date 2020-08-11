@@ -1,7 +1,7 @@
 var count =[ 
     ['Language', 'Speakers (in millions)'],
     ['German',  5.85],
-    ['French',  1.66],
+    ['French',  1.65676],
     ['Italian', 0.316],
     ['Romansh', 0.0791]
 ];
