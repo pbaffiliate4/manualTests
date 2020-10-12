@@ -37,7 +37,7 @@ var content= '\n\
     	return vars;\n\
 	}\n\
 		\n\
-		var baseURL = window.location.origin + window.location.pathname.substring(0,window.location.pathname.indexOf(\"chart10\"))\n\
+		var baseURL = window.location.origin + window.location.pathname.substring(0,window.location.pathname.indexOf(\"ccc\"))\n\
    		var token = $.urlParam(\'auth_token\')\n\
 	\n\
 	\n\
@@ -50,7 +50,7 @@ var content= '\n\
 	\n\
 	var options = {\n\
 		type: \"POST\",\n\
-		url: baseURL + \"country10\",\n\
+		url: baseURL + \"chart/chart1\",\n\
 		success: function() {},\n\
 		failure: function() {},\n\
 		dataType: \"json\",\n\
@@ -62,7 +62,7 @@ var content= '\n\
 	}\n\
 \n\
  	function loadChart() {\n\
-		var chart_content = {\"options\":{\"hAxis\":{\"useFormatFromData\":true,\"viewWindow\":{\"max\":null,\"min\":null},\"minValue\":null,\"maxValue\":null},\"legacyScatterChartLabels\":true,\"series\":{\"0\":{\"color\":\"#ff0000\"}},\"title\":\"Chart Title\",\"titleTextStyle\":{\"color\":\"#000\",\"fontSize\":\"10\",\"bold\":true},\"vAxes\":[{\"title\":null,\"minValue\":null,\"maxValue\":null,\"useFormatFromData\":true,\"viewWindow\":{\"max\":null,\"min\":null},\"logScale\":false},{\"useFormatFromData\":true,\"viewWindow\":{\"max\":null,\"min\":null},\"minValue\":null,\"maxValue\":null,\"logScale\":false}],\"is3D\":false,\"pieHole\":0,\"booleanRole\":\"certainty\",\"width\":600,\"height\":371,\"backgroundColor\":{\"fill\":\"#d0e0e3\"}},\"state\":{},\"view\":{\"columns\":null,\"rows\":null},\"isDefaultVisualization\":false,\"chartType\":\"PieChart\"};\n\
+		var chart_content = {\"options\":{\"focusTarget\":\"category\",\"hAxis\":{\"title\":\"Time of Day\",\"textStyle\":{\"fontSize\":12,\"color\":\"#EE8300\",\"bold\":true},\"titleTextStyle\":{\"fontSize\":14,\"color\":\"#777\",\"bold\":true,\"italic\":true},\"useFormatFromData\":true,\"minValue\":null,\"maxValue\":null,\"viewWindow\":null,\"viewWindowMode\":null},\"legacyScatterChartLabels\":true,\"legend\":\"in\",\"legendTextStyle\":{\"color\":\"#980000\",\"fontSize\":12},\"theme\":\"maximized\",\"title\":\"Chart Title  dfg\",\"titleTextStyle\":{\"color\":\"#d0e0e3\",\"fontSize\":12,\"bold\":true},\"vAxes\":[{\"title\":null,\"minValue\":null,\"maxValue\":null,\"useFormatFromData\":true,\"viewWindow\":{\"max\":null,\"min\":null},\"logScale\":false,\"textStyle\":{\"color\":\"#45818e\",\"fontSize\":12},\"titleTextStyle\":{\"color\":\"#1c4587\",\"fontSize\":12,\"italic\":true}},{\"useFormatFromData\":true,\"viewWindow\":{\"max\":null,\"min\":null},\"minValue\":null,\"maxValue\":null,\"logScale\":false}],\"isStacked\":false,\"booleanRole\":\"certainty\",\"width\":600,\"height\":371},\"state\":{},\"view\":{\"columns\":null,\"rows\":null},\"isDefaultVisualization\":false,\"chartType\":\"ColumnChart\"};\n\
 		delete chart_content.containerId;\n\
 		chart_content[\"containerId\"] = \"scriptrChart\"\n\
    		wrapper = new google.visualization.ChartWrapper(chart_content);\n\
