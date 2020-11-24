@@ -1,0 +1,4 @@
+var log = require("log");
+ log.setLevel("info"); var params = request.body ? request.body : ((request.rawBody) ? request.rawBody : request.parameters);
+ var params = typeof(params) == "object" ? JSON.stringify(params) : params;log.info('{"device":"' + request.user.id+'", "param" : '+params+'}'); 
+ return params;
