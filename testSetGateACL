@@ -1,0 +1,10 @@
+var conf = require("configuration");
+
+var fileACLJSON = {
+    "createFileACL": ["authenticated", "jawhar"],
+    "listFilesACL": ["authenticated", "jawad"]
+}
+
+return conf.setGateACL(fileACLJSON);
+
+return conf.setUnauthorizedErrorFile("");
